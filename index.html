@@ -1,11 +1,58 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-<title>Price in Sats</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-<h1>Price in Sats</h1>
-<script src="app.js"></script>
-</body>
+
+	<head>
+
+    <title>PriceInSats</title>
+ 
+    <style>
+
+      h1 {
+        
+        text-align: center;
+      
+      }
+
+      #chart-container {
+
+        display: flex;
+        justify-content: center;
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <div>Price in Sats</div>
+
+    </header>
+
+    <h1>The World in Bitcoin</h1>
+
+    <div id="chart-container"></div>
+
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+
+    <script>
+
+      const chart = LightweightCharts.createChart(document.getElementById('chart-container'), {
+        
+        width: 600,
+        
+        height: 400,
+       
+       });
+
+      const lineSeries = chart.addLineSeries();
+    
+    </script>
+
+  </body>
+
 </html>
